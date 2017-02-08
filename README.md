@@ -1,6 +1,6 @@
 # reactNative-ShopAPP
 
-reactnative版本0.39,一款电商APP
+reactnative版本0.39, 一款电商APP
 
 ![xiaoguo](https://github.com/bill-mark/reactNative-ShopAPP/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/10.gif?raw=true)
 
@@ -22,5 +22,6 @@ react-native run-android
 ```
 #### 简单的介绍
 ```
-首页和分类两个模块是使用webview加载外部网页，我的和更多是RN代码，有问题欢迎提issue一定回复
+首页和分类两个模块是使用webview加载外部网页，我的 和 更多 这两个模块是RN代码，有问题欢迎提issue一定回复。
+亲，打赏个START吧
 ```
