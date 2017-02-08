@@ -1,6 +1,7 @@
 # reactNative-ShopAPP
 
 reactnative版本0.39, 一款电商APP。亲，觉得喜欢打赏个START吧
+
 ![xiaoguo](https://github.com/bill-mark/reactNative-ShopAPP/blob/master/%E6%95%88%E6%9E%9C%E5%9B%BE/10.gif?raw=true)
 
 ### 安装依赖
