@@ -20,3 +20,6 @@ xCode7 打开 ios/Urselect.xcodeproj, 运行。
 根目录下命令行
 react-native run-android
 ```
+#### 简单的介绍
+```首页和分类两个模块是使用webview加载外部网页，我的和更多是RN代码，有问题欢迎提issue一定回复
+```
