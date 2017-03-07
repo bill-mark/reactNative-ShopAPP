@@ -9,14 +9,9 @@ import {
   ScrollView
 } from 'react-native';
 
-
-var CommonMoreCell = require('./CommonMoreCell')
+var CommonCell = require('./CommonMoreCell')
 
 export default class More extends Component {
-  _back() {
-      this.props.navigator.pop();
-  }
-
   render() {
     return (
           <View style={styles.container}>
@@ -57,11 +52,6 @@ export default class More extends Component {
                           />                
                     </View>
                 </ScrollView>
-
-                <TouchableOpacity onPress={this._back}>
-                  <Text >back on</Text>
-                </TouchableOpacity>
-
           </View>
     );
   }
@@ -71,8 +61,15 @@ export default class More extends Component {
     return(
       <View style={styles.navOutViewStyle}>
            <Text style={{color:'white',fontSize:16,fontWeight:'bold'}}>更多</Text>
-           <TouchableOpacity onPress={()=>{alert('cilck')}} style={styles.rightViewStyle}>
-              <Image source={{uri:'icon_mine_setting'}} style={styles.navImageStyle}/>
+           <TouchableOpacity 
+                 onPress={()=>this.props.navigator.pop()} 
+                 style={styles.rightViewStyle}      
+           >
+              <Text 
+                style={{color:'white'}}
+              >
+                 返回
+              </Text>
            </TouchableOpacity>   
       </View>
     )
@@ -84,7 +81,7 @@ const styles = StyleSheet.create({
   rightViewStyle: {
     position:'absolute',
     right:10,
-    bottom:15
+    bottom:15,
   },
   navImageStyle: {
     width:Platform.OS === 'ios' ? 28:24,

@@ -8,9 +8,17 @@ import {
 
 import MyCell from './CommonMyCell';
 import MineMiddleView from './MineMiddleView';
-import HeaderView from './MineHeaderView';
+import MineHeaderView from './MineHeaderView';
+import More from './More';  //设置场景组件
 
 export default class Mine extends Component {
+    navigate(type = 'Normal') {
+        this.props.navigator.push({
+          component: More,        
+          type: type
+        })
+    }
+
     render() {
     	return (
             <ScrollView
@@ -18,7 +26,9 @@ export default class Mine extends Component {
                 contentInset={{top:-200}}
                 contentOffset={{y:200}}
             >
-                <HeaderView />
+                <MineHeaderView               
+                  test={this.navigate.bind(this)}
+                />
                 <View style={styles.CellStyle}>
                     <MyCell 
                          leftIconName="collect"
@@ -48,8 +58,9 @@ export default class Mine extends Component {
                      />
                      <MyCell 
                         leftIconName="new_friend"
-                        leftTitle="我的收藏"                   
-                     />
+                        leftTitle="我的收藏"   
+                                      
+                     />   
                 </View> 
                 
                 <View style={styles.CellStyle}>
@@ -57,6 +68,7 @@ export default class Mine extends Component {
                         leftIconName="pay"
                         leftTitle="分享app"
                      />
+                     
                 </View> 
             </ScrollView>
         )
